@@ -2,4 +2,15 @@ Thanks for Being Here... enjoy your studding experience
 Best regards
 Developer: Mohammed .Q sattar
 
-Follow Instruction
+Follow Instruction:
+-> turn on xampp server on your computer (navigate to webpage url)
+-> http://localhost/phpmyadmin/ ->
+-> create database with name (repeat)
+-> import database and use the file ReLearnBackup.sql to import databases structure
+-> navigate to xampp folder on your computer by default it should be install on this location(C:\xampp)
+-> create new folder for the project location to run on server suggested name (ReLEarn)
+-> copy and paste project file (Relearn project) inside this location (C:\xampp\htdocs)
+-> nevigate to browser with http://localhost/ReLearn
+
+-- E N J O Y - S T U D D I N G --
+-- G O O D - L U C K --
