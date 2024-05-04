@@ -1,16 +1,21 @@
-Thanks for Being Here... enjoy your studding experience
-Best regards
-Developer: Mohammed .Q sattar
+Welcome to ReLearn!
 
-Follow Instruction:
--> turn on xampp server on your computer (navigate to webpage url)
--> http://localhost/phpmyadmin/ ->
--> create database with name (repeat)
--> import database and use the file ReLearnBackup.sql to import databases structure
--> navigate to xampp folder on your computer by default it should be install on this location(C:\xampp)
--> create new folder for the project location to run on server suggested name (ReLEarn)
--> copy and paste project file (Relearn project) inside this location (C:\xampp\htdocs)
--> nevigate to browser with http://localhost/ReLearn
+Thank you for choosing ReLearn to enhance your studying experience.
 
--- E N J O Y - S T U D D I N G --
--- G O O D - L U C K --
+Best regards,
+
+Developer: Mohammed Q. Sattar
+
+Follow these simple steps to get started:
+
+1- Turn on your XAMPP server: Navigate to http://localhost/phpmyadmin/ on your computer and activate XAMPP.
+2- Create a database: In phpMyAdmin, create a new database named "repeat".
+3- Import database structure: Use the file "ReLearnBackup.sql" to import the necessary database structure.
+4- Set up project location: Navigate to your XAMPP installation directory (usually at C:\xampp).
+5- Create a project folder: Within the "htdocs" directory, create a new folder named "ReLEarn".
+6- Copy project files: Paste the "Relearn project" files into the newly created "ReLEarn" folder.
+7- Access the project: Open your web browser and enter http://localhost/ReLearn in the address bar.
+
+Enjoy your studying experience with ReLearn!
+
+Good luck and happy learning!
