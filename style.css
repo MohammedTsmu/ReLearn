@@ -1,0 +1,163 @@
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.container, .subject, input, textarea, select, button {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Smooth transition for all */
+}
+
+/* Light Theme - Default */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: #ffffff;
+    --input-border: #ddd;
+    --button-bg: #007aff;
+    --button-hover-bg: #0056b3;
+    --delete-button-bg: #815d5d;
+    --delete-button-hover-bg: #8b0000;
+    --alert-border-left-color: #ffd54f;
+    --subject-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --gray-background-color: #333333;
+    --text-color: #e0e0e0;
+    --container-bg: #242424;
+    --input-border: #444;
+    --button-bg: #333;
+    --button-hover-bg: #555;
+    --delete-button-bg: #8b0000;
+    --delete-button-hover-bg: #a30000;
+    --alert-border-left-color: #ffa000; /* Adjust for visibility in dark mode */
+    --subject-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Softer shadow for dark mode */
+}
+
+/* Container & Layout */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: var(--container-bg);
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--subject-box-shadow);
+}
+
+/* Form & Inputs */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input[type="text"], button {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--input-border);
+    margin: 0 8px 8px 0;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+/* Buttons */
+button {
+    padding: 0 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.delete-button {
+    background-color: var(--delete-button-bg);
+}
+
+.delete-button:hover {
+    background-color: var(--delete-button-hover-bg);
+}
+
+/* Alert Styles */
+.alert-in-progress, .alert-coming-soon, .alert-completed, .alert-future {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid var(--alert-border-left-color);
+    background-color: var(--container-bg); /* Use container background for consistency */
+}
+
+/* Header Styles */
+h1, body {
+    /* background-color: var(--container-bg); */
+    background-color: var(--container-bg);
+    color: var(--text-color);
+}
+body {
+    /* background-color: var(--container-bg); */
+    background-color: var(--gray-background-color);
+    color: var(--text-color);
+}
+/* Subject Styles */
+.subject {
+    background-color: var(--container-bg);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--subject-box-shadow);
+    color: var(--text-color);
+}
+
+.subject:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+
+.alert-in-progress {
+    border-color: #ffd54f; /* Vibrant yellow */
+}
+
+.alert-coming-soon {
+    border-color: #ff9800; /* Vibrant orange */
+}
+
+.alert-completed {
+    border-color: #b0bec5; /* Soft grey */
+    color: #d32f2f; /* Slightly softer red for completed tasks */
+    text-decoration: line-through;
+}
+
+.alert-future {
+    border-color: #26a69a; /* Vibrant green */
+    color: #1565c0;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    /* background-color: var(--container-bg); */
+    background-color: var(--background-color);
+    padding: 5px;
+    font-size: 14px;
+    /* background-color: yellow; */ 
+    position: sticky;
+    bottom: 0px;
+    border-radius: 12px;
+    box-shadow: var(--subject-box-shadow);
+}
