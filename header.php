@@ -1,10 +1,4 @@
 <?php 
-session_start();
-
-// Check if the user is logged in, then redirect them to the welcome page directly
-if (!isset($_SESSION["loggedin"])) {
-
-
 include 'db.php'; // Include your database connection
 ?>
 

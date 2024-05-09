@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-include 'header.php';
+include 'header.php'; // include header.php
 include 'db.php'; // Include database connection
 
 
