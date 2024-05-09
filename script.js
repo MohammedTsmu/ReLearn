@@ -1,5 +1,5 @@
 // Add a new subject
-document.getElementById('subjectForm').addEventListener('submit', function(e) {
+document.getElementById('subjectForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const subjectName = document.getElementById('subjectName').value;
 
@@ -8,20 +8,20 @@ document.getElementById('subjectForm').addEventListener('submit', function(e) {
         body: JSON.stringify({ name: subjectName }),
         headers: { 'Content-Type': 'application/json' }
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        if(data.success) {
-            alert(data.message);
-            fetchAndDisplaySubjects(); // Refresh the subjects list after adding
-        } else {
-            alert(data.message);
-        }
-        document.getElementById('subjectName').value = ''; // Clear the input field
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            if (data.success) {
+                alert(data.message);
+                fetchAndDisplaySubjects(); // Refresh the subjects list after adding
+            } else {
+                alert(data.message);
+            }
+            document.getElementById('subjectName').value = ''; // Clear the input field
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 });
 
 // //Fetch and display subjects
@@ -92,9 +92,9 @@ function fetchAndDisplaySubjects() {
                 subject.alerts.forEach(alert => {
                     const alertDate = new Date(alert);
                     const listItem = document.createElement('li');
-                    const dateOptions = { 
-                        weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric', 
-                        hour: '2-digit', minute: '2-digit', second: '2-digit' 
+                    const dateOptions = {
+                        weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric',
+                        hour: '2-digit', minute: '2-digit', second: '2-digit'
                     };
                     // listItem.textContent = alertDate.toLocaleString();
                     listItem.textContent = new Date(alertDate).toLocaleString('en-US', dateOptions);
@@ -139,7 +139,7 @@ function fetchAndDisplaySubjects() {
 
 
 // Delegated event handling for edit and delete actions
-document.getElementById('subjectsContainer').addEventListener('click', function(event) {
+document.getElementById('subjectsContainer').addEventListener('click', function (event) {
     const target = event.target;
     const subjectId = target.dataset.subjectId;
 
@@ -159,14 +159,14 @@ function editSubject(subjectId) {
             body: JSON.stringify({ id: subjectId, name: newName }),
             headers: { 'Content-Type': 'application/json' }
         })
-        .then(response => response.json())
-        .then(data => {
-            if(data.success) {
-                alert('Subject updated successfully.');
-                fetchAndDisplaySubjects(); // Refresh the subjects list
-            }
-        })
-        .catch(error => console.error('Error:', error));
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Subject updated successfully.');
+                    fetchAndDisplaySubjects(); // Refresh the subjects list
+                }
+            })
+            .catch(error => console.error('Error:', error));
     }
 }
 
@@ -178,14 +178,14 @@ function deleteSubject(subjectId) {
             body: JSON.stringify({ id: subjectId }),
             headers: { 'Content-Type': 'application/json' }
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Subject deleted successfully.');
-                fetchAndDisplaySubjects(); // Refresh the subjects list
-            }
-        })
-        .catch(error => console.error('Error:', error));
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Subject deleted successfully.');
+                    fetchAndDisplaySubjects(); // Refresh the subjects list
+                }
+            })
+            .catch(error => console.error('Error:', error));
     }
 }
 
