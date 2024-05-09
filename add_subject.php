@@ -8,7 +8,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 include 'db.php'; // Include your database connection
-
+include 'header.php'; // Include your header
 // Function to add a subject along with the user's ID
 function addSubject($name, $userId) {
     global $pdo;

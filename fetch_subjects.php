@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'db.php'; // Include your database connection
-
+include 'header.php'; // Include your header
 // Function to fetch subjects with their alert dates
 function fetchSubjects() {
     global $pdo;

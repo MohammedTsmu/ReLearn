@@ -9,7 +9,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 include 'db.php'; // Make sure this is the correct path to your database connection file
-
+include 'header.php'; // Include your header
 $data = json_decode(file_get_contents('php://input'), true);
 $subjectId = $data['id'];
 
